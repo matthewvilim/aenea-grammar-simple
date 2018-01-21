@@ -4,8 +4,8 @@ class TMuxRule(MappingRule):
     prefix = "tea "
     tmuxPrefix = "c-b"
     mapping = {
-        prefix + "next": Key(tmuxPrefix + ", n"),
-        prefix + "previous": Key(tmuxPrefix + ", p"),
+        "(" + prefix + "next" + "|nose)": Key(tmuxPrefix + ", n"),
+        "(" + prefix + "previous" + "|pose)": Key(tmuxPrefix + ", p"),
         prefix + "new": Key(tmuxPrefix + ", c"),
         prefix + "kill": Key(tmuxPrefix + ", x"),
         prefix + "detach": Key(tmuxPrefix + ", d"),
@@ -15,7 +15,7 @@ class TMuxRule(MappingRule):
         prefix + "max": Key(tmuxPrefix + ", z"),
         prefix + "vertical split": Key(tmuxPrefix + ", dquote"),
         prefix + "horizontal split": Key(tmuxPrefix + ", percent"),
-        prefix + "switch": Key(tmuxPrefix + ", o"),
+        "(" + prefix + "switch" + "|toes)": Key(tmuxPrefix + ", o"),
         prefix + "scroll": Key(tmuxPrefix + ", lbracket"),
     }
     extras = [

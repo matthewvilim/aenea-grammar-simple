@@ -6,6 +6,7 @@ gitCommandArray = [
     'add',
     'branch',
     'checkout',
+    'clean',
     'clone',
     'commit',
     'diff',
@@ -21,6 +22,7 @@ gitCommandArray = [
     'show',
     'stash',
     'status',
+    'submodule',
     'tag',
     'remote',
 ]

@@ -10,8 +10,14 @@ class VimRule(MappingRule):
         prefix + "force quit": Text(":q!\n"),
         prefix + "vertical split": Text(":vs "),
         prefix + "no highlight": Text(":noh\n"),
-        prefix + "switch": Key("c-w, w"),
+        "less [<n>]": Key("c-u:%(n)d"),
+        "more [<n>]": Key("c-d:%(n)d"),
+        "switch": Key("c-w, w"),
     }
     extras = [
         Dictation("text"),
+        IntegerRef("n", 1, 10),
     ]
+    defaults = {
+      "n": 1,
+    }

@@ -7,17 +7,17 @@ letterMap = {
     "brave": "b",
     "cave": "c",
     "dive": "d",
-    "eagle": "e",
+    "edge": "e",
     "fox": "f",
     "gauge": "g",
-    "hawk": "h",
+    "hatch": "h",
     "inch": "i",
     "jab": "j",
     "kick": "k",
     "lime": "l",
     "mike": "m",
     "noun": "n",
-    "oath": "o",
+    "own": "o",
     "poke": "p",
     "queen": "q",
     "rome": "r",
@@ -37,7 +37,7 @@ symbolMap = {
     "mine": "hyphen",
     "drop": "dot",
     "drip": "comma",
-    "crazy": "backslash",
+    "line": "backslash",
     "score": "underscore",
     "star": "asterisk",
     "coal": "colon",
@@ -49,7 +49,7 @@ symbolMap = {
     "dolly": "dollar",
     "percy": "percent",
     "amper": "ampersand",
-    "lazy": "slash",
+    "rhine": "slash",
     "quake": "equal",
     "plus": "plus",
     "clam": "exclamation",
@@ -67,6 +67,8 @@ symbolMap = {
     "punch": "enter",
     "ace": "space",
     "torque": "tab",
+    "up": "pgup",
+    "down": "pgdown",
 }
 
 def formatSymbol(symbols, repeat, gap):
@@ -123,9 +125,9 @@ class GapTypes:
     none = 4
 
 gapMap = {
-    "lash": GapTypes.lap,
-    "rash": GapTypes.rap,
-    "gash": GapTypes.gap,
+    "leach": GapTypes.lap,
+    "reach": GapTypes.rap,
+    "each": GapTypes.gap,
 }
 
 skyMap = {
@@ -143,6 +145,7 @@ class KeyboardRule(MappingRule):
         "clutch": Key("escape"),
         "key <key> [<n1>]": Key("%(key)s:%(n1)d"),
         "tram": Key("ctrl:down/3"),
+        "shift": Key("shift:down/3"),
         "train": Key("alt:down/3"),
     }
     extras = [

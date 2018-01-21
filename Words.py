@@ -244,19 +244,19 @@ def lowercase_text(text):
     Text("%(text)s").execute({"text": newText})
 
 formatMap = {
-    "sentence": FormatTypes.sentenceCase,
-    "camel": FormatTypes.camelCase,
-    "pacify": FormatTypes.pascalCase,
+    "sent": FormatTypes.sentenceCase,
+    "cam": FormatTypes.camelCase,
+    "pace": FormatTypes.pascalCase,
     "snake": FormatTypes.snakeCase,
     "yell snake": [FormatTypes.snakeCase, FormatTypes.upperCase],
     "yell": FormatTypes.upperCase,
-    "whisper": FormatTypes.lowerCase,
+    "mutt": FormatTypes.lowerCase,
     "squash": FormatTypes.squash,
     "yell squash": [FormatTypes.squash, FormatTypes.upperCase],
-    "dashify": FormatTypes.dashify,
-    "yell dashify": [FormatTypes.dashify, FormatTypes.upperCase],
-    "dotify": FormatTypes.dotify,
-    "yell dotify": [FormatTypes.dotify, FormatTypes.upperCase],
+    "squeeze": FormatTypes.dashify,
+    "yell squeeze": [FormatTypes.dashify, FormatTypes.upperCase],
+    "scrunch": FormatTypes.dotify,
+    "yell scrunch": [FormatTypes.dotify, FormatTypes.upperCase],
     "dictate": FormatTypes.spokenForm,
 }
 
@@ -293,6 +293,7 @@ abbreviation = {
     "dequeue": "deq",
     "description": "desc",
     "(develop|development)": "dev",
+    "difference": "diff",
     "(dictionary|dictation)": "dict",
     "(direction|directory)": "dir",
     "dynamic": "dyn",
@@ -328,6 +329,7 @@ abbreviation = {
     "mount": "mnt",
     "modify": "mod",
     "multiplexer": "mux",
+    "(mutable|mutex)": "mut",
     "number": "num",
     "object": "obj",
     "okay": "ok",
@@ -351,6 +353,7 @@ abbreviation = {
     "regular (expression|expressions)": "regex",
     "request": "req",
     "response": "resp",
+    "return": "ret",
     "revision": "rev",
     "select": "sel",
     "shell": "sh",
@@ -406,9 +409,9 @@ vocabulary = {
 		"fifoe": "fifo",
 		"tucson": "tucson",
 		"(lou|laura|lula)": "lua",
-		"null": "null",
+		"noull": "null",
 		"let": "let",
-		"nil": "nil",
+		"(no|nill)": "nil",
 		"class": "class",
 		"true": "true",
 		"false": "false",
@@ -458,11 +461,18 @@ vocabulary = {
 		"global": "global",
 		"local": "local",
 		"self": "self",
+		"rust": "rust",
+		"nand": "nand",
+		"loop": "loop",
+		"as": "as",
 }
 
 exception = {
   "phil": "fill",
   "pear": "pair",
+  "pears": "pairs",
+  "right": "write",
+  "Q": "queue",
 }
 
 class WordRule(MappingRule):
